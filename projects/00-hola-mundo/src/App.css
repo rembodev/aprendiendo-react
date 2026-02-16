@@ -1,0 +1,86 @@
+.tw-followCard {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 0.8rem;
+  justify-content: space-between;
+}
+
+.tw-followCard-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tw-followCard-info {
+  display: flex;
+  flex-direction: column;
+}
+.tw-followCard-infoUserName {
+  opacity: 0.6;
+}
+.tw-followCard-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 1000px;
+}
+
+.tw-followCard-button {
+  margin-left: 25px;
+  border: 0;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-weight: bold;
+  border: 1px solid #000;
+  transition: 0.3s ease background-color;
+}
+
+.tw-followCard-button:hover {
+  opacity: 0.8;
+}
+
+.tw-followCard-text {
+  display: block;
+}
+
+
+
+.tw-followCard-button.is-following {
+  border: 1px solid red;
+  background: transparent;
+  color: #fff;
+  width: 140px;
+}
+
+.tw-followCard-button:hover {
+  background-color: rgba(45, 45, 45, .175);
+  color:red;
+  border: 1px solid red;
+  transition: .3s ease all;
+  opacity: 1;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-text {
+  display: none;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-stopFollow {
+  display: block;
+}
+
+.tw-followCard-stopFollow {
+  display:none;
+}
+
+/*La mejor forma para poder separar componentes dentro es hacerlo dentro contenedor y no del mismo componente
+
+.tw-followCard {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: .8rem;
+    justify-content: space-between;
+->  margin-bottom: 10px;   No es buena practica (mueve todo el componente)
+    }
+
+*/
