@@ -1,4 +1,4 @@
-# 🐦 Twitter Follow Card (React Clone)| Proyecto 01
+# 🐦 Twitter Follow Card | Proyecto 01 
 
 Un clon funcional del componente de sugerencias "A quién seguir" de Twitter (X), desarrollado con **React** y **Vite**. Este proyecto se enfoca en el manejo de estado, renderizado condicional y estilos CSS interactivos.
 ![Vista previa de la aplicación](./src/assets/Preview.png)
@@ -19,3 +19,7 @@ Un clon funcional del componente de sugerencias "A quién seguir" de Twitter (X)
 - **Vite** (Empaquetador y servidor de desarrollo)
 - **CSS3** (Variables y Flexbox)
 - **Standard JS** (Estilo de código)
+
+## 
+
+Guiado por Midudev
