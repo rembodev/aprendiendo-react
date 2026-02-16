@@ -6,7 +6,7 @@
 
 | ID | Proyecto | Descripción | Conceptos Clave | Enlace |
 |:---:|---|---|---|:---:|
-| **00** | **Twitter Follow Card** | Clon de la tarjeta "A quién seguir" de Twitter (X). | `useState`, `props`, `rendering lists`, `BEM` | [Ver Proyecto](./projects/00-hola-mundo) |
+| **00** | **Twitter Follow Card** | Clon de la tarjeta "A quién seguir" de Twitter (X). | `useState`, `props`, `rendering lists`, `BEM` | [Ver Proyecto](./projects/TwitterFollowCard) |
 | **01** | *Próximamente* | *Cargando siguiente proyecto...* | ... | ... |
 
 *(Iré actualizando esta tabla conforme suba más ejercicios).*
