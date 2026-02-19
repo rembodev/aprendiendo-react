@@ -1,4 +1,4 @@
-# 🌳 Linktree Clone 
+# 🌳 Linktree Clone | Proyecto 02
 
 Este es mi **segundo proyecto** en mi camino de aprendizaje con **React**. Tras completar un primer proyecto guiado por el curso de **Midudev**, decidí lanzarme a crear este Linktree de forma independiente para poner a prueba lo aprendido y añadir funcionalidades extra.
 
@@ -36,12 +36,17 @@ Configuré el entorno usando **Vite** con el compilador **SWC** para obtener tie
 
 ## 📸 Imagenes del Trabajo
 
-![Preview](/src/assets/1.png) 
-![Preview](/src/assets/2.png) 
-![Preview](/src/assets/3.png) 
-![Preview](/src/assets/4.png) 
-![Preview](/src/assets/5.png) 
-![Preview](/src/assets/6.png) 
+![Vista previa de la aplicación]( ./public/Preview.png)
+
+![Vista previa de la aplicación](./public/Youtube.png)
+
+![Vista previa de la aplicación]( ./public/Twitch.png)
+
+![Vista previa de la aplicación](./public/Github.png)
+
+![Vista previa de la aplicación]( ./public/Share.png)
+
+![Vista previa de la aplicación](./public/Follow.png)
 
 ---
 Inspirado en midudev
