@@ -7,7 +7,7 @@ import './App.css'
 export function Buttonlk ({ username, nameSite, linkSite }) {
   
   /* Para crear el cambio de colores mediante el paso del mouse (hover) 
-  se realizo un objeto en donded se guardo los colores de acuerdo al nombre.
+  se realizo un objeto en donded se guardo los colores de acuerdo al nombre
   */
 
   const siteColors = {

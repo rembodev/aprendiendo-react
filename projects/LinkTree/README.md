@@ -1,16 +1,48 @@
-# React + Vite
+# 🌳 Linktree Clone 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es mi **segundo proyecto** en mi camino de aprendizaje con **React**. Tras completar un primer proyecto guiado por el curso de **Midudev**, decidí lanzarme a crear este Linktree de forma independiente para poner a prueba lo aprendido y añadir funcionalidades extra.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Lo que aprendí y apliqué
 
-## React Compiler
+### 1. Gestión Dinámica de Estilos (Hover)
+En lugar de crear una clase de CSS por cada red social, utilicé un **objeto de configuración de colores** en JavaScript. 
+* Pasé el nombre del sitio como `prop`.
+* Utilicé ese nombre como clave para extraer el color del objeto.
+* Apliqué una variable de CSS dinámica (`--hover-color`) para que el botón sepa qué color mostrar al hacer hover.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### 2. Botón de Suscripción Inteligente
+El botón **Follow** no solo redirige al canal, sino que incluye el parámetro de confirmación de suscripción de YouTube, mejorando la interacción del usuario.
 
-## Expanding the ESLint configuration
+### 3. API de Portapapeles y Try/Catch
+Para el botón de compartir, implementé la lógica de copiado de URL:
+* Uso de `navigator.clipboard.writeText`.
+* Implementación de bloques `try...catch` para manejar posibles errores del navegador y asegurar que la aplicación no se rompa.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 4. Arquitectura con Vite + SWC
+Configuré el entorno usando **Vite** con el compilador **SWC** para obtener tiempos de respuesta instantáneos durante el desarrollo.
+
+---
+
+## Tecnologías
+
+* **React 18**
+* **JavaScript (ES6+)**
+* **Vite**
+* **CSS3** (Flexbox y variables dinámicas)
+
+---
+
+## 📸 Imagenes del Trabajo
+
+![Preview](/src/assets/1.png) 
+![Preview](/src/assets/2.png) 
+![Preview](/src/assets/3.png) 
+![Preview](/src/assets/4.png) 
+![Preview](/src/assets/5.png) 
+![Preview](/src/assets/6.png) 
+
+---
+Inspirado en midudev
+
