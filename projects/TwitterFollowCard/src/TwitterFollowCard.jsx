@@ -5,7 +5,7 @@ export function TwitterFollowCard({ children, userName, initialIsFollowing }) {
     const [isFollowing, setIsFollowing] = useState(initialIsFollowing)
 
     // Alternativa 1 = const avatarSrc = 'https://unavatar.io/${userName}'
-    const text = isFollowing ? 'Siguiendo' : 'Seguir'
+    const text = isFollowing ? 'Siguiendo' : 'Seguir' // if equal ? and else equal :
     const buttonClassName = isFollowing ?
         'tw-followCard-button is-following'
         : 'tw-followCard-button'
@@ -18,7 +18,7 @@ export function TwitterFollowCard({ children, userName, initialIsFollowing }) {
             <header className='tw-followCard-header'>
                 <img
                     className='tw-followCard-avatar'
-                    alt="Avatar de {name}"
+                    alt={`Avatar de ${userName}`}
                     src={`https://unavatar.io/x/${userName}`} />
                 <div className='tw-followCard-info'>
                     {children}

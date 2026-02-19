@@ -1,0 +1,114 @@
+.lk-header {
+  width: 400px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.lk-nav .lk-buttons-header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.lk-follow a {
+  color: black;
+  padding: 5px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 4px;
+  border-radius: 50px;
+  background: #fffb7a;
+  border: 3px solid #fffb7a;
+}
+.lk-follow a:hover {
+  background: #f5ed57;
+  border: 3px solid #f5ed57;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.lk-share button {
+  padding-top: 3px;
+  width: 36px;
+  height: 36px;
+  border-radius: 1000px;
+  background: #fffb7a;
+  border: 3px solid #fffb7a;
+  cursor: pointer;
+}
+
+.lk-share button:hover {
+  background: #f5ed57;
+  border: 3px solid #f5ed57;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.lk-avatar {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.lk-avatar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.lk-name {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+}
+
+.lk-slogan {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+hr {
+  border: 1px solid #222;
+  margin: 15px 0;
+}
+
+.lk-ul-btn {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  place-items: center;
+  gap: 20px;
+  min-height: 27vh;
+}
+
+.lk-btn-sites {
+  margin: 0;
+  width: 320px;
+  padding: 5px 0;
+  background-color: #fffb7a;
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid #252323;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+  transition: background-color 0.3s ease;
+}
+
+.lk-btn-sites:hover {
+  background-color: var(--hover-color);
+  color: white;
+}

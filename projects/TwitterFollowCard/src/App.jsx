@@ -41,7 +41,7 @@ const users = [
         <section className='App'>
            {
             users.map(user => {
-                const {userName, name, isFollowing} = user
+                const {userName, name, isFollowing} = user 
                 return (
                     <TwitterFollowCard 
                         key={userName}
