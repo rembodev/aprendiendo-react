@@ -2,7 +2,7 @@
 
 Un proyecto sencillo de Tres en Raya para practicar **React** y el manejo del estado.Me sirvió mucho para entender mejor cómo manejar el estado y la inmutabilidad. 
 
-Me basé en algunas ideas de midudev, pero quise darle mi toque personal, especialmente en la lógica para verificar quién gana.
+Me basé en algunas ideas de [midudev](https://www.youtube.com/watch?v=qkzcjwnueLA&list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29&index=2), pero quise darle mi toque personal, especialmente en la lógica para verificar quién gana.
 
 ![Vista previa del juego](src/assets/2026-02-24-194040_hyprshot.png)
 
