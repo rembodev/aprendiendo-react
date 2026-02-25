@@ -1,16 +1,17 @@
-# React + Vite
+# ❌ Tic Tac Toe en React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un proyecto sencillo de Tres en Raya para practicar **React** y el manejo del estado.Me sirvió mucho para entender mejor cómo manejar el estado y la inmutabilidad. 
 
-Currently, two official plugins are available:
+Me basé en algunas ideas de midudev, pero quise darle mi toque personal, especialmente en la lógica para verificar quién gana.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Vista previa del juego](src/assets/2026-02-24-194040_hyprshot.png)
 
-## React Compiler
+![Vista previa del juego](src/assets/2026-02-24-194047_hyprshot.png)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Características 
+* **Lógica compacta:** En lugar de escribir todas las combinaciones ganadoras a mano, usé un bucle `for` para chequear filas y columnas de forma más eficiente.
+* **No se pierde el progreso:** Si se cierra la pestaña por error o refrescas, la partida sigue ahí gracias al `localStorage`.
+* **Confeti:** Se Uso `canvas-confetti` para cuando alguien gana.
+* **Componentes limpios:** Separé el tablero, los cuadrados y el modal del ganador para que el código sea fácil de leer.
