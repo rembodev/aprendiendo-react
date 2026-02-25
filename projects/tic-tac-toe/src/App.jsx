@@ -9,33 +9,57 @@ import { WinnerModal } from './components/WinnerModal.jsx'
 /*
 tratar de no mutar las props, tener en cuenta que los estados tienen que ser inmutables
 */
-
-function App () {
-  const [board, setBoard] = useState(Array(9).fill(null))
-  const [turn, setTurn] = useState(TURNS.X)
+/* Guardar el estado de la partida dentro del board, 
+  debido a que la inicializacion solo ocurre una sola vez 
+  permitiendo asi que no se renderize de nuevo e inncesariamente, ademas de no volver la 
+  pagina mas lenta
+ */
+function App() {
+  const [board, setBoard] = useState(() => {
+    const boardFromStorage = window.localStorage.getItem('board')
+    if(boardFromStorage) return JSON.parse(boardFromStorage)
+    return Array(9).fill(null)
+  })
+  const [turn, setTurn] = useState(() => {
+    const turnFromStorage = window.localStorage.getItem('turn')
+    return turnFromStorage ?? TURNS.X
+  })
   const [winner, setWinner] = useState(null)
 
-  const updateBoard = index => {
+   const resetGame = () => {
+    setBoard(Array(9).fill(null))
+    setTurn(TURNS.X)
+    setWinner(null)
+
+    window.localStorage.removeItem('board')
+    window.localStorage.removeItem('turn')
+  }
+
+  const updateBoard = (index) => {
     if (board[index] || winner) return // con esto ya se sobreescribe
+
     const newBoard = [...board]
+
     newBoard[index] = turn
-    const newWinner = checkWinner(newBoard)
     setBoard(newBoard)
+
+    const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
+    setTurn(newTurn)
+
+    // guardar estado de partida
+    window.localStorage.setItem('board', JSON.stringify(newBoard))
+    window.localStorage.setItem('turn', newTurn)
+
+    const newWinner = checkWinner(newBoard)
+
     if (newWinner) {
       confetti()
       setWinner(newWinner)
     } else if (checkEndGame(newBoard)) {
       setWinner(false) // empate
-    } else {
-      setTurn(turn === TURNS.X ? TURNS.O : TURNS.X)
     }
   }
 
-  const resetGame = () => {
-    setBoard(Array(9).fill(null))
-    setTurn(TURNS.X)
-    setWinner(null)
-  }
 
   return (
     <main className='board'>
@@ -54,7 +78,7 @@ function App () {
         <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
         <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
       </section>
-      <WinnerModal resetGame={resetGame} winner={winner}/>
+      <WinnerModal resetGame={resetGame} winner={winner} />
     </main>
   )
 }
