@@ -1,16 +1,32 @@
-# React + Vite
+# 🖱️ Mouse Follower
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un proyecto práctico para entender el ciclo de vida de los componentes en React, específicamente el hook `useEffect` y la importancia del **cleanup** (limpieza de efectos).
 
-Currently, two official plugins are available:
+[Vista previa del proyecto](https://mouse-follower-rev.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ¿Qué aprendí con este ejercicio?
 
-## React Compiler
+* **Control de efectos:** Cómo ejecutar código solo cuando una dependencia cambia (en este caso, cuando activamos o desactivamos el seguimiento).
+* **Suscripciones y Eventos:** Aprendí a escuchar eventos globales del navegador (`pointermove`) directamente desde React.
+* **Limpieza de memoria (Cleanup):** Esta es la parte más importante. Aprendí que si no remueves el evento (`removeEventListener`) cuando el componente se desmonta o el efecto cambia, se crean múltiples suscripciones que pueden hacer que la aplicación se rompa o vaya lenta.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+### Toque personal en los Estilos
+A diferencia de hacerlo todo con estilos en línea (inline styles), decidí utilizar **Variables CSS** para que la transición de la posición sea más fluida y el código de React quede mucho más limpio:
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+<div 
+className="ms-pointer" 
+// creacion de la variable
+style={{ '--position': `${position.x}px, ${position.y}px` }} />
+```
+
+```
+css
+/* Uso de variables para la posición */
+.ms-pointer {
+  position: absolute;
+  transform: translate(var(--position));
+  /* ... otros estilos ... */
+}
+```
