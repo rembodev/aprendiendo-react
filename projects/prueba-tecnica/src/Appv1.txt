@@ -1,0 +1,49 @@
+import { useEffect, useState } from "react"
+import './App.css'
+
+
+// const CAT_ENPOINT_IMAGE_URL = `https://cataas.com/cat/says/${firstWord}?fontSize=50&fontColor=red&json=true`
+
+export function App() {
+    const [fact, setFact] = useState()
+    const [imageUrl, setImageUrl] = useState()
+    /* fech de datos 
+    Esto esta prohibido 
+    fetch('https://catfact.ninja/fact')
+        .then(response => response.json())
+        .then(data => setFact(data.fact))
+    
+    ESTO SE VA A UTILIZAR DENTROP DEL USEEFFECT()
+    - el setFact no se regenera, no es una depencia que no cambia
+    */
+
+    useEffect(() => {
+        fetch(CAT_ENPOINT_RANDOM_FACT)
+            .then(res => res.json())
+            .then(data => {
+                const { fact } = data
+                setFact(fact)
+                const threeFirstWords = fact.split(' ', 3).join(' ')
+                console.log(threeFirstWords)
+
+                fetch(`https://cataas.com/cat/says/${threeFirstWords}?fontSize=50&fontColor=red&json=true`)
+                    .then(res => res.json())
+                    .then(response => {
+                        const { url } = response
+                        setImageUrl(url)
+                    })
+            })
+    }, [])
+
+
+
+    return (
+        <main>
+            <h1>App de Gatitos</h1>
+            <section>
+            {fact && <p>{fact}</p>}
+            {imageUrl && <img src={imageUrl} alt={`Image extracted using the first three word for ${fact}`} />}
+        </section>
+        </main>
+    )
+}
