@@ -1,24 +1,38 @@
-# Aprendiendo React
+# ⚛️ React Learning Lab
 
-¡Bienvenido/a! Este repositorio documenta mi camino de aprendizaje en **React**. Aquí iré subiendo prácticas, ejercicios y proyectos pequeños a medida que avanzo en el dominio de la librería, organizados por carpetas.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
-## 📂 Índice de Proyectos
+Este repositorio es mi bitácora de experimentación con **React**. Aquí documento mis primeros pasos, retos y soluciones en el mundo de los componentes.
 
-| ID | Proyecto | Fecha | Descripción | Conceptos Clave | Enlace |
-|:---:|---|:---:|---|---|:---:|
-| **01** | **Twitter Follow Card** | 15/02/2026 | Clon de la tarjeta "A quién seguir" de Twitter (X). | `useState`, `props`, `rendering lists`, `BEM` | [Ver Proyecto](./projects/TwitterFollowCard) |
-| **02** | **Linktree Midudev** | 18/02/2026 | Interfaz de enlaces dinámica con hover personalizado y funciones de compartir. | `Props`, `Dynamic Styles`, `Clipboard API` | [Ver Proyecto](./projects/LinkTree) |
-| **03** | **Tic Tac Toe** | 24/02/2026 | Juego clásico con persistencia de partida y lógica de victoria optimizada. | `localStorage`, `Inmutabilidad`, `Lógica de Arrays` | [Ver Proyecto](./projects/Tic-tac-toe) |
-| **04** | **Mouse Follower** | 27/02/2026 | Efecto de puntero personalizado que sigue el movimiento del mouse. | `useEffect`, `Cleanup (remover eventos)`, `Variables CSS` | [Ver Proyecto](./projects/Mouse-follower) |
-| **05** | *Próximamente* | - | *Cargando siguiente proyecto...* | ... | ... |
+---
 
-*(Iré actualizando esta tabla conforme suba más ejercicios).*
+### 🚧 Nota de Aprendizaje: Pausa Consciente
+> **"No se puede dominar una herramienta sin dominar primero la materia prima."**
+>
+> He decidido pausar temporalmente el avance en este repositorio. Aunque React me entusiasma, he comprendido que para ser un desarrollador sólido necesito un dominio real de **JavaScript puro**. 
+>
+> No quiero saltarme etapas ni arrastrar vacíos técnicos. Por ello, estoy dedicando mi tiempo actual a profundizar en la lógica, algoritmos y bases de JS. Este laboratorio se reactivará cuando sienta que mi base de JavaScript está a la altura de los proyectos que quiero construir aquí.
 
-## Tecnologías Generales
+---
 
-Estos proyectos están construidos utilizando el ecosistema moderno de React:
+## 📂 Proyectos Experimentales Realizados
+Hasta el momento, he explorado los siguientes conceptos:
 
-- **Librería:** React 18+
-- **Build Tool:** Vite
-- **Lenguaje:** JavaScript (ES6+) / JSX
-- **Estilos:** CSS3, CSS Modules, (Variables y Flexbox)
+| ID | Proyecto | Lo que aprendí |
+|:---:|---|---|
+| **01** | **Twitter Follow Card** | Manejo de `props` y renderizado de listas. |
+| **02** | **Linktree Style** | Estilos dinámicos y uso de la Clipboard API. |
+| **03** | **Tic Tac Toe** | Inmutabilidad de estados y lógica de arrays. |
+| **04** | **Mouse Follower** | El ciclo de vida con `useEffect` y limpieza de eventos. |
+
+---
+
+## 🛠️ Tecnologías
+- **Core:** React 18+ & Vite.
+- **Fundamentos:** Documentando mi progreso paralelo en JS en **Obsidian**.
+
+---
+*Calidad sobre rapidez. Volveré cuando mi JS sea más fuerte.*
+
+Hecho por [rembodev](https://github.com/rembodev)
